@@ -15,7 +15,7 @@ def index():
     return 'Bot is running!'
 
 def run_flask():
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=8080)
 
 # 特権的なインテントの設定
 intents = discord.Intents.default()
