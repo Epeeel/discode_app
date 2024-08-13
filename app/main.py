@@ -23,6 +23,7 @@ intents.message_content = True
 intents.members = True
 
 client = discord.Client(intents=intents)
+TOKEN = os.environ.get("TOKEN")
 DEEPL_API_KEY = os.getenv("DEEPL_API_KEY")
 if not DEEPL_API_KEY:
     raise ValueError("DeepL API key is not set. Please set the API key in Replit Secrets.")
