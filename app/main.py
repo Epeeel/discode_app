@@ -56,17 +56,17 @@ async def on_message(message):
             else:
                 # その他の言語から日本語に翻訳
                 translated = translator.translate_text(message.content, target_lang='JA')
-                await message.channel.send(f'Japanese Translation: {translated.text}')
+                await message.channel.send(f'Indonesian Translation: {translated.text}')
 
         elif ABROAD_SPEAKER_ROLE in member_roles:
             if detected_lang == 'id':
                 # インドネシア語から日本語に翻訳
                 translated = translator.translate_text(message.content, target_lang='JA')
-                await message.channel.send(f'Japanese Translation: {translated.text}')
+                await message.channel.send(f'日本語訳: {translated.text}')
             else:
                 # その他の言語から日本語に翻訳
                 translated = translator.translate_text(message.content, target_lang='JA')
-                await message.channel.send(f'Japanese Translation: {translated.text}')
+                await message.channel.send(f'日本語訳: {translated.text}')
         else:
             await message.channel.send('この機能を利用するためのロールがありません。')
     except Exception as e:
